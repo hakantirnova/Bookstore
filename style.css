@@ -19,8 +19,13 @@
   margin-left: 10%;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
 .title {
   font-weight: bold;
+  color: var(--black);
 }
 
 .menu, .menu_icons {
@@ -87,6 +92,7 @@
 .book_card {
   /* height: 400px; */
 }
+
 .book_card img {
   height: 300px;
   width: 200px;
@@ -116,7 +122,7 @@
 
 .book_description {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 4;  /*Kitap açıklamasının max 4 satır olmasını istiyoruz*/
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -136,6 +142,7 @@
   background-color: transparent;
   transition: var(--transition);
   padding: 5px 0;
+  border-radius: 5px;
 }
 
 .btn_purple:hover {
@@ -301,4 +308,60 @@
 
 .total_price:empty + .btn_purple {
   display: none;
+}
+
+@media(max-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  .menu_icons {
+    
+  }
+  .navbar {
+    justify-content: space-evenly;
+  }
+  .filter_background {
+    display: none;
+  }
+  .filter {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: -40px;
+    min-height: 0;
+  }
+  .filter li.active::before {
+    display: none;
+  }
+  .filter li.active {
+    font-size: unset;
+  }
+  .book_card img {
+    height: 200px;
+  }
+  .author-fs {
+    font-size: 1rem !important;
+  }
+  .name-fs {
+    font-size: 1.1rem !important;
+  }
+  .bi-star-fill {
+    font-size: 1rem !important;
+  }
+  .review-fs {
+    font-size: 14px !important;
+  }
+  .description-fs {
+    font-size: 14px;
+  }
+  .price-fs {
+    font-size: 1.1rem !important;
+  }
+  .price-mt {
+    margin-top: -5px;
+  }
+  .btn-w {
+    font-size: 0.6rem !important;
+    width: 100px;
+  }
 }

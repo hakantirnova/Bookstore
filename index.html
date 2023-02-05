@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yazılım Mektebi | Kitap Mağazası</title>
+    <title>Kitap Mağazası</title>
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/toastr/toastr.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
-      <h2 class="title">Bookshop</h2>
+      <a href="index.html"><h2 class="title">Kitap Dünyası</h2></a>
       <ul class="menu">
         <li class="active">Books</li>
         <li>AUDIOBOOKS</li>
@@ -22,7 +22,8 @@
         <li><i class="bi bi-search"></i></li>
         <li class="basket_icon" onclick="toggleModal()">
           <i class="bi bi-bag"></i>
-          <span class="basket_count"></span></li>
+          <span class="basket_count"></span>
+        </li>
       </ul>
     </nav>
     <section class="slider">
@@ -48,13 +49,10 @@
         </button>
       </div>
     </section>
-    <section class="store mb-5">
+    <section class="store my-5">
       <div class="filter_background"></div>
       <ul class="filter">
-        <li class="active">Tümü</li>
-        <li>Roman</li>
-        <li>Kişisel Gelişim</li>
-        <li>Fantastik</li>
+        
       </ul>
       <div class="row book_list">
         
@@ -68,7 +66,7 @@
           <li class="basket_item">No items to Buy Again.</li>
         </ul>
         <div class="basket_total">
-          <span class="fw-bold mb-3 fs4 total_price"></span>
+          <span class="fw-bold mb-3 fs-5 total_price"></span>
           <button class="btn_purple">CHECKOUT</button>
         </div>
       </div>
